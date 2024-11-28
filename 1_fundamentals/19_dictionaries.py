@@ -4,7 +4,6 @@
 A principal diferença que veremos na estrutura de dicionários será o fato de a mesma utilizar CHAVE - VALOR,
 a mesma pode usar índices, normalmente isso ocorre com o uso de STRINGS
 """
-from os import pipe2
 
 person = {
     "name": "Ralph dos Santos Souza",
@@ -64,3 +63,47 @@ Caso eu chame uma CHAVE inexistente eu posso definir um valor default de respost
 """
 
 print(person.get("tags", [])) # Neste caso ele trará uma lista vazia
+
+"""
+Diferente das TUPLAS os DICIONÁRIOS são mutáveis, podemos através das chaves alterar seus valores ou adicionar
+novos valores como veremos no exemplo abaixo.
+"""
+
+new_person = {
+    "name": "Ralph dos Santos Souza",
+    "age": 39,
+    "courses": [
+        "React",
+        "Python",
+        "Javascript"
+    ]
+}
+
+print(new_person)
+
+new_person["age"] = 40
+print(new_person)
+
+new_person["courses"].append("JAVA")
+print(new_person)
+
+"""
+Podemos fazer a exclusão de valores de um dicionário utilizando o módulo .pop(), como no exemplo abaixo.
+"""
+
+new_person.pop("age")
+print(new_person)
+
+"""
+Do mesmo modo podemos atualizar os valores dentro do dicionário utilizando o módulo .update(), como no exemplo abaixo.
+"""
+
+new_person.update({"age": 40, "gender": "Masculino"})
+print(new_person)
+
+"""
+Se utilizarmos o módulo .clear() iremos limpar totalmente o nosso dicionário, como no exemplo abaixo.
+"""
+
+new_person.clear()
+print(new_person)
