@@ -87,3 +87,50 @@ print(" ")
 for key, value in product.items():
     print(key, "=", value) # E neste exemplo estamos adquirindo tanto CHAVE quanto VALOR do produto usando .ITEMS()
 print(" ")
+
+"""
+Abaixo nós veremos exemplos de uso da estrutura de repetição FOR sem uso de ELSE.
+"""
+
+FORBIDDEN_WORDS = (
+    "futebol",
+    "religião",
+    "política"
+)
+
+texts = [
+    "João gosta de futebol e política.",
+    "A praia foi divertida."
+]
+
+def find_forbidden_word():
+    for text in texts: # Analisa cada texto dentro da lista de textos
+        found = False
+        for word in text.lower().split(): # O .SPLIT() por padrão fará a separação das palavras por espaços em branco
+            if word in FORBIDDEN_WORDS:
+                print(f"Texto possui pelo menos 1(uma) palavra proibida! {word}")
+                found = True
+                break
+
+        if not found:
+            print(f"Texto autorizado! {text}")
+
+
+find_forbidden_word()
+
+"""
+Abaixo nós veremos exemplos de uso da estrutura de repetição FOR com uso de ELSE.
+"""
+
+def find_forbidden_word_with_else():
+    for text in texts:
+        for word in text.lower().split(): # Analisa cada palavra dentro do texto separando por espaços em branco
+            if word in FORBIDDEN_WORDS: # Compara cada palavra com as palavras contidas na TUPLA
+                print(f"Texto possui pelo menos 1(uma) palavra proibida! {word}")
+                break
+
+        else:
+            print(f"Texto autorizado! {text}")
+
+
+find_forbidden_word_with_else()
