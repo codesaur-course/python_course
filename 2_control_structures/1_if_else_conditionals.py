@@ -72,9 +72,9 @@ age = int(input("Informe a idade: "))
 def age_group(age):
     if 0 <= age < 18: # Aqui estamos comparando se IDADE for menor ou igual ( <= ) e também se é menor que ( < )
         return "MENOR DE IDADE"
-    elif age in range(18, 64): # Aqui estamos estabelecendo uma faixa de comparação através do módulo range()
+    elif age in range(18, 65): # Aqui estamos estabelecendo uma faixa de comparação através do módulo range()
         return "ADULTO"
-    elif age in range(65, 100):
+    elif age in range(65, 101):
         return "TERCEIRA IDADE"
     elif age > 100:
         return "CENTENÁRIO"
