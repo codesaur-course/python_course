@@ -1,5 +1,0 @@
-# CALLABLE COM PACKING | UNPACKING
-
-"""
-
-"""
